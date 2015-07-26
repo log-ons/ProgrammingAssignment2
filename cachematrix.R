@@ -4,6 +4,9 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
+    
+    ## makeCacheMatrix - Takes matrix input and if matrix already exit
+    ##then return cached inverse matrix else null.
     m <- NULL
     set <- function(y) {
         x <<- y
@@ -23,6 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+    # Checks if makeCacheMatrix return value then returns cached value
+    # Else calculate inv matrix and cach it and also return inv matrix.
     
     m <- x$getinv()
     if(!is.null(m)) {
